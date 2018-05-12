@@ -1,0 +1,220 @@
+<!doctype html>
+<!-- declare file type -->
+<html lang="en">
+  <head>
+    <meta content-type="text/javascript" charset="utf-8">
+    <meta name="generator" content="<project-name> App">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
+    <title><project-name></title>
+    <meta name="description" content="My App description">
+    <base href="/">
+    <link rel='canonical' href='https://your-domain-name.com'>
+    <link rel="shortcut icon" sizes="24x24" href="/images/fresh/android/android-launchericon-24-24.png">
+
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="<project-name>">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="<project-name>">
+
+    <link rel='icon' sizes='192x192' href='/images/fresh/android/android-launchericon-192-192.png'>
+
+    <link rel="apple-touch-icon" href="/images/new_images/logo_1240x600.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/new_images/logo_72x72.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="/images/new_images/logo_96x96.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/new_images/logo_144x144.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/images/new_images/192x192.png">
+
+    <meta name="msapplication-TileImage" content="/images/new_images/logo_50x50.png">
+    <meta name="msapplication-TileColor" content="#3f51b5">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="msapplication-square70x70logo" content="/images/new_images/logo_72x72.png">
+    <meta name="msapplication-square152x152logo" content="/images/new_images/logo_152x152.png">
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+    window.gadgets = window.gadgets || {
+      config: {
+        register: function () {}
+      }
+    };
+
+      window.app = {
+                      flagObj : true,
+                      localSettings : {},
+                      user: {},
+                      currencyList: {
+                        "BD": "BDT",
+                        },
+                      currencyListISO3 : {
+                        "BD": "BGD",
+                      },
+                      currencySymbol : {
+                        "AED"	:	{"cc":"AED","symbol":"\u062f.\u0625;","name":"UAE dirham"},
+
+                      },
+                      currencyArray: [
+                          {"cc":"AED","symbol":"\u062f.\u0625;","name":"UAE dirham"},
+
+                      ],
+                      countryName :
+                      [
+                        "Afghanistan","Albania",
+                      ],
+                    };
+      app.working = function(flag){
+        document.querySelector("#working").active = flag;
+      };
+
+      window.Polymer = {rootPath: '/'};
+      // Load and register pre-caching Service Worker
+      if('serviceWorker' in navigator) {
+       navigator.serviceWorker.register('/sw.js', { scope: '/' })
+         .then(function(registration) {
+               console.log('Service Worker Registered - ' + registration.scope);
+         });
+       navigator.serviceWorker.ready.then(function(registration) {
+          console.log('Service Worker Ready');
+       });
+     }
+
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', '<ga-id>', 'auto');
+      ga('send', 'pageview');
+      window.addEventListener('location-changed', function() {
+        ga('set', 'page', window.location.pathname);
+        ga('send', 'pageview');
+      });
+
+    </script>
+
+    <script>
+    function getIP(json) {
+      if (json.country && json.city) {
+       console.log('Location of '+json.query+': '+json.city+', '+json.country+'');
+       app.localSettings = {};
+       app.localSettings.businessName = json.businessWebsite;
+       app.localSettings.businessWebsite = json.businessWebsite;
+       app.localSettings.city = json.city;
+       app.localSettings.continent = json.continent;
+       app.localSettings.country = json.country;
+       app.localSettings.countryCode = json.countryCode;
+       app.localSettings.ipName = json.ipName;
+       app.localSettings.ipType = json.ipType;
+       app.localSettings.isp = json.isp;
+       app.localSettings.lat = json.lat;
+       app.localSettings.lon = json.lon;
+       app.localSettings.org = json.org;
+       app.localSettings.query = json.query;
+       app.localSettings.region = json.region;
+       app.localSettings.currency = app.currencyList[json.countryCode];
+       app.localSettings.currencySymbol = app.currencySymbol[app.localSettings.currency].symbol;
+      }
+     }
+    </script>
+    <script src="//extreme-ip-lookup.com/json/?callback=getIP" async defer></script>
+
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../browserify_scripts/client-moment-quater.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.js"></script>
+    <script src='bower_components/pdfmaker/pdfmake.min.js'></script>
+    <script src='bower_components/pdfmaker/vfs_fonts.js'></script>
+
+    <!-- ***** IMP **** INCLUDE POLYMER & POLYMER-HTML only once in index.html.
+        If you include multiple pages then iOS (SAFARI and CHROME) breaks -->
+    <link rel="import" href="bower_components/polymer/polymer.html">
+    <link rel="import" href="bower_components/polymer/polymer-element.html">
+    <link rel="import" href="bower_components/paper-toast/paper-toast.html">
+    <link rel="import" href="bower_components/paper-spinner/paper-spinner.html">
+    <link rel="import" href="bower_components/paper-progress/paper-progress.html">
+    <link rel="import" href="bower_components/iron-image/iron-image.html">
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+    <link rel="import" href="ice.html">
+
+    <!-- Load your application shell -->
+    <!-- <link rel="import" href="welcome-page.html"> -->
+    <link rel="import" href="my-app.html">
+
+    <!-- Add any global styles for body, document, etc. -->
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Roboto', 'Noto', sans-serif;
+        line-height: 1.0;
+        min-height: 100vh;
+        /* background-color: #eeeeee; */
+        background-color: #f4f4f4;
+      }
+      paper-spinner.mainSpinner{
+        width: 35px;
+        height: 35px;
+        --paper-spinner-stroke-width: 6px;
+        --paper-spinner-layer-1-color: var(--paper-purple-500);
+        --paper-spinner-layer-2-color: var(--paper-cyan-500);
+        --paper-spinner-layer-3-color: var(--paper-blue-grey-500);
+        --paper-spinner-layer-4-color: var(--paper-amber-500);
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9;
+      }
+      paper-progress.progressbar{
+        z-index: 1;
+        width: 100%;
+        --paper-progress-active-color: #E7015B; /*var(--paper-red-500);*/
+        --paper-progress-secondary-color: #DB2D71; /*var(--paper-red-100);*/
+        --paper-progress-container-color: #f4f4f4;
+        --paper-progress-height: 3px;
+      }
+
+      paper-toast.success {
+         --paper-toast-background-color: #FFFFFF; /*background - 323232*/
+         --paper-toast-color: #000000;/*font color - f1f1f1*/
+         margin-left: calc(50vw - 150px);
+         text-align: center;
+      }
+      paper-toast.successShort {
+         --paper-toast-background-color: #009933; /*background - 323232*/
+         --paper-toast-color: #FFFFFF;/*font color - f1f1f1*/
+         text-align: center;
+      }
+      paper-toast.error {
+         --paper-toast-background-color: #fca6a6; /*background - 323232*/
+         --paper-toast-color: #FFFFFF;/*font color - f1f1f1*/
+      }
+      paper-button.yellow-button {
+          text-transform: none;
+          color: #eeff41;
+        }
+
+    </style>
+  </head>
+  <body>
+        <paper-toast class="success" id="toast" text="Hi, Welcome to BIZREC!">
+          <div style="align:center; padding: 25px;">
+          <iron-image src="../images/header/paper-toast-done.gif" preload sizing="contain" style="width:70px; height:70px;" onclick="toast.toggle()"></iron-image>
+        </div>
+        </paper-toast>
+        <paper-toast id="toastShort" class="successShort" text="Hi, Welcome to BIZREC!">
+        </paper-toast>
+        <paper-toast id="toastError" class="error" text="Error:">
+        </paper-toast>
+        <paper-toast id="toastErrorPersist" duration="0" text="Error">
+          <paper-button onclick="toastErrorPersist.toggle()" class="yellow-button">Ok</paper-button>
+        </paper-toast>
+    <my-app></my-app>
+    <paper-spinner id="working" class="mainSpinner"></paper-spinner>
+    <noscript>
+      Please enable JavaScript to view this website.
+    </noscript>
+  </body>
+</html>
