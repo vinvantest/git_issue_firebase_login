@@ -1,0 +1,46 @@
+<template is="dom-repeat" items={{users}}>
+	 <button class="heading" aria-expanded$="[[isExpanded(opened{{index}})]]" aria-controls="collapse{{index}}" onclick="toggle('#collapse{{index}}')" >
+	 {{item.firstName}} {{item.lastName}}
+	 <paper-toggle-button style="float: right;" checked$="{{item.isActive}}">Activo</paper-toggle-button>
+ </button>
+  <iron-collapse id="collapse{{index}}" tabindex="0" opened?="{{opened{{index}}}}">
+    <div class="content horizontal layout">
+        <div class="flex-1">
+          <paper-item>
+            <paper-item-body two-line>
+              <div>Email</div>
+              <div secondary>{{item.email}}</div>
+            </paper-item-body>
+          </paper-item>
+          <paper-item>
+            <paper-item-body two-line>
+              <div>Teléfono</div>
+              <div secondary>{{item.phone}}</div>
+            </paper-item-body>
+          </paper-item>
+          <paper-item>
+            <paper-item-body two-line>
+              <div>Género</div>
+              <div secondary>{{item.gender}}</div>
+            </paper-item-body>
+          </paper-item>
+        </div>
+      </div>
+    </div>
+  </iron-collapse>
+</template>
+
+<Script>
+ready: function() {
+   this.users = [
+     {firstName: 'Pedro', lastName: 'Vargas', email: 'pedro@mail.com', phone:'(222) 212 12 12', gender: 'Masculino', isActive:true},
+     {firstName: 'Andrea', lastName: 'Vargas', email: 'andrea@mail.com', phone:'(222) 212 12 13', gender: 'Femenino', isActive:false},
+     {firstName: 'Juan', lastName: 'Martínez', email: 'juan@mail.com', phone:'(222) 212 12 12', gender: 'Masculino', isActive:true},
+   ];}
+function toggle(selector) {
+  document.querySelector(selector).toggle();
+}
+document.querySelector('template[is=dom-repeat]').isExpanded = function(opened) {
+  return String(opened);
+};
+</script>

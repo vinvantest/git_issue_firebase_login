@@ -1,0 +1,125 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src/my-app.html",
+  "fragments": [
+    "src/landing-page.html",
+    "src/dashboard-page.html",
+    "src/transactions-page.html",
+    "src/not-found-404.html",
+    "src/dialog-html.html",
+    "src/ice.html",
+    "src/lazy-import.html",
+    "src/shared-styles.html",
+    "src/chartofaccounts-page.html",
+    "src/customers-page.html",
+    "src/invoices-page.html",
+    "src/payments-page.html",
+    "src/reports-page.html",
+    "src/settings-page.html",
+    "src/rules-page.html",
+    "src/notes-page.html",
+    "src/login-page.html",
+    "src/banks-page.html",
+    "src/users-page.html"
+  ],
+  "sources": [
+    "src/**/*",
+    "images/**/*",
+    "bower.json",
+    "index.html",
+    "src/my-app.html",
+    "src/landing-page.html",
+    "src/dashboard-page.html",
+    "src/transactions-page.html",
+    "src/not-found-404.html",
+    "src/dialog-html.html",
+    "src/ice.html",
+    "src/lazy-import.html",
+    "src/shared-styles.html",
+    "src/chartofaccounts-page.html",
+    "src/customers-page.html",
+    "src/invoices-page.html",
+    "src/payments-page.html",
+    "src/reports-page.html",
+    "src/settings-page.html",
+    "src/rules-page.html",
+    "src/notes-page.html",
+    "src/login-page.html",
+    "src/banks-page.html",
+    "src/users-page.html"
+  ],
+  "extraDependencies": [
+    "bower_components/webcomponentsjs/*.js",
+    "manifest.json",
+    "bower_components/webcomponentsjs/*.js"
+  ],
+  "builds": [
+    {
+      "name": "es5-bundled",
+      "js": {
+        "minify": true,
+        "compile": "es5",
+        "transformModulesToAmd": true
+      },
+      "css": {
+        "minify": true
+      },
+      "html": {
+        "minify": true
+      },
+      "bundle": true,
+      "addServiceWorker": true,
+      "addPushManifest": false,
+      "preset": "es5-bundled"
+    },
+    {
+      "name": "es6-bundled",
+      "browserCapabilities": [
+        "es2015"
+      ],
+      "js": {
+        "minify": true,
+        "compile": "es2015",
+        "transformModulesToAmd": true
+      },
+      "css": {
+        "minify": true
+      },
+      "html": {
+        "minify": true
+      },
+      "bundle": true,
+      "addServiceWorker": true,
+      "addPushManifest": false,
+      "preset": "es6-bundled"
+    },
+    {
+      "name": "es6-unbundled",
+      "browserCapabilities": [
+        "es2015",
+        "push"
+      ],
+      "js": {
+        "minify": true,
+        "compile": "es2015",
+        "transformModulesToAmd": true
+      },
+      "css": {
+        "minify": true
+      },
+      "html": {
+        "minify": true
+      },
+      "bundle": false,
+      "addServiceWorker": true,
+      "addPushManifest": true,
+      "preset": "es6-unbundled"
+    }
+  ],
+  "lint": {
+    "rules": [
+      "polymer-2"
+    ]
+  },
+  "moduleResolution": "node"
+}

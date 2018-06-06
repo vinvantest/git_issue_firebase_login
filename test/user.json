@@ -1,0 +1,53 @@
+{
+	"user":
+      {
+    		"uid": "GOOicZrZADQMOhUjqGtzh3UiGIj2",
+    		"displayName": "Vinayak Vanarse",
+    		"photoURL": "https://lh5.googleusercontent.com/-GVY334SIV28/AAAAAAAAAAI/AAAAAAAAAF8/76a2XsxEgGk/photo.jpg",
+    		"email": "vinayak.vanarse@gmail.com",
+    		"emailVerified": true,
+    		"phoneNumber": null,
+    		"isAnonymous": false,
+    		"providerData": [{
+    			"uid": "112773197373249639440",
+    			"displayName": "Vinayak Vanarse",
+    			"photoURL": "https://lh5.googleusercontent.com/-GVY334SIV28/AAAAAAAAAAI/AAAAAAAAAF8/76a2XsxEgGk/photo.jpg",
+    			"email": "vinayak.vanarse@gmail.com",
+    			"phoneNumber": null,
+    			"providerId": "google.com"
+    		}],
+    		"apiKey": "AIzaSyBnA4Fen4iiDLABQoPUX3ePSDgeoCKjQq0",
+    		"appName": "[DEFAULT]",
+    		"authDomain": "vin-poly-fire.firebaseapp.com",
+    		"stsTokenManager": {
+    			"apiKey": "AIzaSyBnA4Fen4iiDLABQoPUX3ePSDgeoCKjQq0",
+    			"refreshToken": "APRrRCKgUtLUHYMie7aFNZbkXm6stFfZTPVxV_Z-4oZ52mLN9G9IObRMNZUu6BQqsFNuX4kt77nhzOnDEaCRhtd1tNJ_yCzmDKvzF6Nj92RPXlA2vKJnQgYC60tz-cAuZ7JRF_LqXLPxvIJXIA5Yo-AYQjG5ybthWWr387_WLcw1PtsBLZODqLDL1dK4lCIjXouHg_AAN8WFMMGl1W3X9mhCnD9nOcK5_ljCQgo-s6JRlBos82gyU2PrkmACO_oQwH70KK2ps1dEKtJI0qY-LRer62aEVxEr-Hn998eAlVtzeRVwaWskowf4S9HJzae80KvAo0eyOiId-RpMdkGpo4HGD_smVmM0ErEWUNWhmbUb-4bQ3RG1DGo",
+    			"accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjkxNjAyYTc0NDcxNGFmMzk3MzAwYWUyOWFhNTdlM2FmODUxY2MzNDIifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdmluLXBvbHktZmlyZSIsIm5hbWUiOiJWaW5heWFrIFZhbmFyc2UiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDUuZ29vZ2xldXNlcmNvbnRlbnQuY29tLy1HVlkzMzRTSVYyOC9BQUFBQUFBQUFBSS9BQUFBQUFBQUFGOC83NmEyWHN4RWdHay9waG90by5qcGciLCJhdWQiOiJ2aW4tcG9seS1maXJlIiwiYXV0aF90aW1lIjoxNTA2MDI1MjcxLCJ1c2VyX2lkIjoiR09PaWNaclpBRFFNT2hVanFHdHpoM1VpR0lqMiIsInN1YiI6IkdPT2ljWnJaQURRTU9oVWpxR3R6aDNVaUdJajIiLCJpYXQiOjE1MDYwMjUyNzEsImV4cCI6MTUwNjAyODg3MSwiZW1haWwiOiJ2aW5heWFrLnZhbmFyc2VAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMTI3NzMxOTczNzMyNDk2Mzk0NDAiXSwiZW1haWwiOlsidmluYXlhay52YW5hcnNlQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.ZRVxUuDkO7_VgOO1sEGgiUhIZ9aqirfXl3iLx8ITTFXjh8I7dPZdIadEtb3V-HUDx4E_m-e-lp7zia1use0RrEFHrAYUNf8NGKN6RPzWVGHvyfOUmn5_ylaPEqHM9fMHSi8baWw726JokEWjdDL7Q1wEUR2RDoClip6oVEo5ZQvA0UXLLfizKgXaPKKeuQEYWkT-SOjXsSlH4FIi9LNtwD_VOL2N-tHxZtTRayK7vfsObVroDVcWcbNhv2QkTVq7YTAlVzmVXzao8T0NhE4adfWIQ_lgI8RgOg19gSlqOR5bvLXNfb_ciDGKOePrvEsgkiuyvlsi4-zpd3JaPvlXaw",
+    			"expirationTime": 1506028873275
+    		},
+    		"redirectEventId": null
+    	},
+	"credential":
+      {
+    		"idToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImU2YmEyOTY5NTU2NWY3ODQ3OTkwMWNmMzU5ZmQ2ZTliZGJiZDdjY2QifQ.eyJhenAiOiI3MzI2MTA3MjY1NzEtMXZuaXNramJpMnU4djkxaTQ2OXZrbDJudWthYXJ1dmQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI3MzI2MTA3MjY1NzEtMXZuaXNramJpMnU4djkxaTQ2OXZrbDJudWthYXJ1dmQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTI3NzMxOTczNzMyNDk2Mzk0NDAiLCJlbWFpbCI6InZpbmF5YWsudmFuYXJzZUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6IkZwRkxoRVFGWGlTd1htU29MbkNwUlEiLCJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiaWF0IjoxNTA2MDI1MjcxLCJleHAiOjE1MDYwMjg4NzF9.ch75e2Q6Xy1EUrIlLMJ1DqtmnoB2NAo_qnF8qObEqoBvJkUulO60jCV4n_p817RtFaBbDNalIhFWeK7W1zqLZqgdCiB68qV5mBT4wSV5rZE1OuUbDmW7B9fsvEZpxteNaQEchORZn-ZUizF2iH5kEToAaeVAo6o-LBFY6bNvGw1dIWxufa45pit2vUe18EDMU2c45XUUCb0eO6nyTxgTKfHvss52zi6M_vrC4QtYjOL-2GkJgxdCq5vBOwy_kJ5rdvv9cW1y6IIGU6aA_b75KYC7Y3_BYwGzYRBcA_r1niTDJPrY-CxptaLqZ6mSdUOX1piOgkwMNqrI0fwCWuoNrg",
+    		"accessToken": "ya29.GmHNBHwgymQGPBnsUeYuvkX_ukLi9Kfo7DiGJ3lTbhj3ITK7aTLZWA1IVLiaL7mZcFVXPnH1E1le8ozm10mb6d74waUlpBP9LuQUjMG2NRyCnPsECMPnwAQXii09TaCSHmKQ",
+    		"providerId": "google.com"
+    	},
+	"additionalUserInfo":
+      {
+    		"profile": {
+    			"gender": "male",
+    			"name": "Vinayak Vanarse",
+    			"link": "https://plus.google.com/112773197373249639440",
+    			"id": "112773197373249639440",
+    			"verified_email": true,
+    			"given_name": "Vinayak",
+    			"locale": "en",
+    			"family_name": "Vanarse",
+    			"email": "vinayak.vanarse@gmail.com",
+    			"picture": "https://lh5.googleusercontent.com/-GVY334SIV28/AAAAAAAAAAI/AAAAAAAAAF8/76a2XsxEgGk/photo.jpg"
+    		},
+    		"providerId": "google.com"
+    	},
+	"operationType": "signIn"
+}

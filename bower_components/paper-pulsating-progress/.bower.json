@@ -1,0 +1,44 @@
+{
+  "name": "paper-pulsating-progress",
+  "authors": [
+    "collaborne"
+  ],
+  "description": "Polymer element that shows three pulsating icons to indicate loading progress",
+  "main": "paper-pulsating-progress.html",
+  "keywords": [
+    "web-components",
+    "polymer",
+    "paper",
+    "material design",
+    "progress",
+    "loading"
+  ],
+  "license": "Apache 2",
+  "homepage": "https://github.com/collaborne/paper-pulsating-progress",
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0",
+    "iron-icon": "PolymerElements/iron-icon#^2.0.0",
+    "iron-icons": "PolymerElements/iron-icons#^2.0.0",
+    "iron-validator-behavior": "PolymerElements/iron-flex-layout#^2.0.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^2.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
+    "paper-checkbox": "PolymerElements/paper-checkbox#^2.0.0",
+    "web-component-tester": "*"
+  },
+  "version": "2.0.2",
+  "_release": "2.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.0.2",
+    "commit": "f5ceb3e377caf81e66d8ccc651c76e8d5a60914c"
+  },
+  "_source": "https://github.com/Collaborne/paper-pulsating-progress.git",
+  "_target": "^2.0.2",
+  "_originalSource": "Collaborne/paper-pulsating-progress",
+  "_direct": true
+}
